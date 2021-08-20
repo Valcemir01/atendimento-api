@@ -23,8 +23,8 @@ public class Parciente implements Serializable {
 	private Date dataInicio;
 	private String obs;
 	@OneToMany(mappedBy = "parciente")
-	private List<Atendimento> atendimentos = new ArrayList<>(); 
-	
+	private List<Atendimento> atendimentos = new ArrayList<>();
+
 	public Parciente() {
 		super();
 		// TODO Auto-generated constructor stub

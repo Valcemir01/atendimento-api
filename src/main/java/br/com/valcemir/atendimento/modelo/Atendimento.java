@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Atendimento implements Serializable {
-	private static final long serialVersionUID = 1L;	
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -23,10 +23,12 @@ public class Atendimento implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "parciente_id")
 	private Parciente parciente;
+
 	public Atendimento() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public Atendimento(Integer id, int tempo, Date data, String obs, Parciente parciente) {
 		super();
 		this.id = id;
@@ -35,40 +37,52 @@ public class Atendimento implements Serializable {
 		this.obs = obs;
 		this.parciente = parciente;
 	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public int getTempo() {
 		return tempo;
 	}
+
 	public void setTempo(int tempo) {
 		this.tempo = tempo;
 	}
+
 	public Date getData() {
 		return data;
 	}
+
 	public void setData(Date data) {
 		this.data = data;
 	}
+
 	public String getObs() {
 		return obs;
 	}
+
 	public void setObs(String obs) {
 		this.obs = obs;
 	}
+
 	public Parciente getParciente() {
 		return parciente;
 	}
+
 	public void setParciente(Parciente parciente) {
 		this.parciente = parciente;
 	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
