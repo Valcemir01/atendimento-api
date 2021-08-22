@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Atendimento implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -20,6 +22,7 @@ public class Atendimento implements Serializable {
 	private int tempo;
 	private Date data;
 	private String obs;
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "parciente_id")
 	private Parciente parciente;

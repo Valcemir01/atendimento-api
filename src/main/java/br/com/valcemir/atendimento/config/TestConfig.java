@@ -16,7 +16,7 @@ public class TestConfig {
 	
 	@Bean
 	public void InstanciaDB() {
-		this.service.IniciarDB();
+		//this.service.IniciarDB();
 	}
 
 }
